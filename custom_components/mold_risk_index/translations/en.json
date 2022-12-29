@@ -1,0 +1,26 @@
+{
+  "title": "Mold Risk Index sensor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add Mold Risk Index sensor",
+        "description": "Create a sensor that calculates the risk of mold growth from temperature and humidity sensors.",
+        "data": {
+          "name": "Name",
+          "humidity_entity_id": "Humidity sensor",
+          "temperature_entity_id": "Temperature sensor"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "humidity_entity_id": "Humidity sensor",
+          "temperature_entity_id": "Temperature sensor"
+        }
+      }
+    }
+  }
+}
