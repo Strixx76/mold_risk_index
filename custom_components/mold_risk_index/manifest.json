@@ -8,6 +8,5 @@
   "iot_class": "calculated",
   "config_flow": true,
   "dependencies": [],
-  "requirements": [],
-  "integration_type": "device"
+  "requirements": []
 }
