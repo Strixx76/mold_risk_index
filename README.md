@@ -10,7 +10,7 @@ Calculate the risk of mold in a not heated confined space, like an unventilated 
 Here you normally have colder temperatures (in my part of the world) than inside your house most time of the year, and no surfaces that is much colder than the air inside. This means you can allow a higher humidity without the risk of mold. This integration can also be used for a not heated garage or attic for example.
 
 For spaces that are heated and where the risk of mold is close to cold surfaces (like in a bathroom) you should use the ["Mold Indicator"](https://www.home-assistant.io/integrations/mold_indicator/).
-The formulas for the "Mold Risk Index” is inspired by a forum thread in a Swedish house building forum at [byggahus.se](https://www.byggahus.se/forum/threads/formel-foer-riskkurva.311612).
+The formulas for the "Mold Risk Index” is inspired by a forum thread in a Swedish house building forum at [byggahus.se](https://www.byggahus.se/forum/threads/formel-foer-riskkurva.311612). Which in turn are originating (among others) from a publication by Hannu Viitanen named ["Factors affecting mould growth on kiln dried wood"](https://cris.vtt.fi/en/organisations/vtt-technical-research-centre-of-finland/publications/). *Search the net and you will find the publication*
 
 The risk of mold according to these formulas looks like this:
 ![Graph](/plot.png)
