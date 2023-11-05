@@ -1,0 +1,26 @@
+{
+  "title": "Schimmelrisiko-Index Sensor",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Schimmelrisiko-Index Sensor hinzufügen",
+        "description": "Erstelle einen Sensor, der das Risiko des Schimmelwachstums aus Temperatur- und Feuchtigkeitssensoren berechnet.",
+        "data": {
+          "name": "Name",
+          "humidity_entity_id": "Feuchtigkeitssensor",
+          "temperature_entity_id": "Temperatursensor"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "humidity_entity_id": "Feuchtigkeitssensor",
+          "temperature_entity_id": "Temperatursensor"
+        }
+      }
+    }
+  }
+}
