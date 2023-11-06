@@ -1,0 +1,26 @@
+{
+  "title": "Senzor indexu rizika plesní",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pridajte snímač indexu rizika plesní",
+        "description": "Vytvorte senzor, ktorý vypočíta riziko rastu plesní zo senzorov teploty a vlhkosti.",
+        "data": {
+          "name": "Názov",
+          "humidity_entity_id": "Snímač vlhkosti",
+          "temperature_entity_id": "Snímač teploty"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "humidity_entity_id": "Snímač vlhkosti",
+          "temperature_entity_id": "Snímač teploty"
+        }
+      }
+    }
+  }
+}
