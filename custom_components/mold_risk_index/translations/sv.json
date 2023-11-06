@@ -1,0 +1,26 @@
+{
+    "title": "Sensor för mögelriskindex",
+    "config": {
+      "step": {
+        "user": {
+          "title": "Lägg till en sensor för mögelriskindex",
+          "description": "Skapa en sensor som räknar ut risken för mögeltillväxt utifrån temperatur och luftfuktighet.",
+          "data": {
+            "name": "Namn",
+            "humidity_entity_id": "Luftfuktighetssensor",
+            "temperature_entity_id": "Temperatursensor"
+          }
+        }
+      }
+    },
+    "options": {
+      "step": {
+        "init": {
+          "data": {
+            "humidity_entity_id": "Luftfuktighetssensor",
+            "temperature_entity_id": "Temperatursensor"
+          }
+        }
+      }
+    }
+  }
