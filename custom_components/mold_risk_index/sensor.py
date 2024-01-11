@@ -223,6 +223,7 @@ class MoldRiskLimitSensor(MoldRiskBaseSensor):
     _limit_level_1: int | None = None
     _limit_level_2: int | None = None
     _limit_level_3: int | None = None
+    _temperature: float | None = None
 
     async def async_added_to_hass(self) -> None:
         """ Handle added to Hass. """
@@ -254,6 +255,7 @@ class MoldRiskLimitSensor(MoldRiskBaseSensor):
             updated = True
         
         if updated:
+            self._temperature = self._mold_calc.temperature
             self.async_write_ha_state()
 
     @property
@@ -263,6 +265,7 @@ class MoldRiskLimitSensor(MoldRiskBaseSensor):
             "Level 1 limit": self._limit_level_1,
             "Level 2 limit": self._limit_level_2,
             "Level 3 limit": self._limit_level_3,
+            "Temperature": self._temperature,
         }
     
     @property
@@ -282,6 +285,8 @@ class MoldRiskIndexSensor(MoldRiskBaseSensor):
     _attr_name = "Risk Index"
     
     _risk: int | None = None
+    _temperature: float | None = None
+    _humidity: float | None = None
 
     async def async_added_to_hass(self) -> None:
         """ Handle added to Hass. """
@@ -305,8 +310,18 @@ class MoldRiskIndexSensor(MoldRiskBaseSensor):
         self._mold_calc.async_event_receiver(event)
         if self._mold_calc.risk != self._risk:
             self._risk = self._mold_calc.risk
+            self._temperature = self._mold_calc.temperature
+            self._humidity = self._mold_calc.humidity
             self.async_write_ha_state()
     
+    @property
+    def extra_state_attributes(self) -> dict[str, Any]:
+        """ Return the state attributes of the sensor. """
+        return {
+            "Temperature": self._temperature,
+            "Humidity": self._humidity,
+        }
+
     @property
     def native_value(self) -> int | None:
         """ Return the state of the sensor. """
