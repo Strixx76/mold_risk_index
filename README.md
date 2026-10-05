@@ -5,6 +5,9 @@
 
 ## Features
 
+> [!IMPORTANT]
+> **This integration only supports metric system at the moment. I am currently rewriting the integration to support other units than Celsius and to catch up with the development of Home Assistant.**
+
 Calculate the risk of mold in a not heated confined space, like an unventilated [crawl space](https://en.wikipedia.org/wiki/Crawl_space), only taking the temperature and humidity in count.
 
 Here you normally have colder temperatures (in my part of the world) than inside your house most time of the year, and no surfaces that is much colder than the air inside. This means you can allow a higher humidity without the risk of mold. This integration can also be used for a not heated garage or attic for example.
